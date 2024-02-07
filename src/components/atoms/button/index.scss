@@ -1,0 +1,396 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.a-button {
+  $root: &;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+  border: 0.5px solid $color-secondary-two;
+  border-radius: 8px;
+  @include displayFlex(row, space-between, center);
+  column-gap: 6px;
+
+  &:focus {
+    box-shadow: 0px 0px 4px 4px $color-shadow-button;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 4px 4px $color-shadow-button;
+  }
+
+  //Modifier classes for font weight
+  &--regular {
+    font-weight: $font-regular;
+  }
+
+  &--medium {
+    font-weight: $font-medium;
+  }
+
+  &--bold {
+    font-weight: $font-bold;
+  }
+
+  &--semiBold {
+    font-weight: $font-semi-bold;
+  }
+
+  //Modifier classes for button sizes
+  &--primarySize {
+    font-size: $font-14;
+    line-height: 19.6px;
+    height: 40px;
+    @include displayFlex(row, center, center);
+    column-gap: 6px;
+    min-width: 100px;
+    border-radius: 8px;
+  }
+
+  &--secondarySize {
+    font-size: $font-13;
+    line-height: 18.2px;
+    height: 34px;
+    @include displayFlex(row, center, center);
+    min-width: 78px;
+    border-radius: 6px;
+  }
+
+  &--tertiarySize {
+    font-size: $font-14;
+    line-height: 19.6px;
+    height: 40px;
+    @include displayFlex(row, center, center);
+    min-width: 185px;
+    border-radius: 8px;
+    column-gap: 6px;
+  }
+
+  &--fullWidth {
+    font-size: $font-13;
+    width: 100%;
+    height: 40px;
+    @include displayFlex(row, center, center);
+    line-height: 19.5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 6px;
+  }
+
+  //Modifier classes for background colors
+  &--success {
+    background-color: $color-secondary-four;
+    border: none;
+
+    &:not(:disabled):hover {
+      background-color: $color-seaweed-green;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 4px 4px $color-light-green;
+    }
+  }
+
+  &--warning {
+    background-color: $color-warning;
+    border: none;
+
+    &:not(:disabled):hover {
+      background-color: $color-burning-orange;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 4px 4px $color-light-warn;
+    }
+  }
+
+  &--danger {
+    background-color: $color-error;
+    border: none;
+
+    &:not(:disabled):hover {
+      background-color: $color-persian-red;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 4px 4px $color-light-warn;
+    }
+  }
+
+  &--light {
+    background-color: $color-white;
+    border: 1px solid $color-secondary-two;
+
+    &:not(:disabled):hover {
+      border-color: $color-blueberry;
+      color: $color-blueberry;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &--dark {
+    background-color: $color-secondary-one;
+    border: none;
+
+    &:not(:disabled):hover {
+      background-color: $color-ebony-clay;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &--info {
+    background-color: $color-primary;
+    border: none;
+
+    &:not(:disabled):hover {
+      background-color: $color-blueberry;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  //Modifier classes for colors
+  &--white {
+    color: $color-white;
+  }
+
+  &--black {
+    color: $color-secondary-one;
+  }
+
+  &--grey {
+    color: $color-secondary-two;
+  }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--clearBlue {
+    color: $color-clear-blue;
+  }
+}
+/////////////////////
+
+// &--white {
+//   color: $color-white;
+// }
+
+// &--primary {
+//   color: $color-primary;
+// }
+
+// &--grey {
+//   color: $color-secondary-two;
+// }
+
+// &--black {
+//   color: $color-secondary-one;
+// }
+// &--clearBlue {
+//   color: $color-clear-blue;
+// }
+// &--clearBlueBg {
+//   background-color: $color-clear-blue;
+// }
+// &--dune {
+//   background-color: $color-dune;
+// }
+// &--lavenderMistBG {
+//   background-color: $color-lavender-mist;
+// }
+// &--lightBlueMagenta {
+//   background-color: $color-light-blue-magenta;
+// }
+
+// &--warning {
+//   background-color: $color-warning;
+//   border: none;
+
+//   &:not(:disabled):hover {
+//     background-color: $color-burning-orange;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+
+//   &:hover {
+//     box-shadow: 0px 0px 4px 4px $color-light-warn;
+//   }
+// }
+
+// &--success {
+//   background-color: $color-secondary-four;
+//   border: none;
+
+//   &:not(:disabled):hover {
+//     background-color: $color-seaweed-green;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+
+//   &:hover {
+//     box-shadow: 0px 0px 4px 4px $color-light-green;
+//   }
+// }
+
+// &--light {
+//   background-color: $color-white;
+//   border: 1px solid $color-secondary-two;
+
+//   &:not(:disabled):hover {
+//     border-color: $color-blueberry;
+//     color: $color-blueberry;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+// }
+
+// &--dark {
+//   background-color: $color-secondary-one;
+//   border: none;
+
+//   &:not(:disabled):hover {
+//     background-color: $color-ebony-clay;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+// }
+
+// &--info {
+//   background-color: $color-primary;
+//   border: none;
+
+//   &:not(:disabled):hover {
+//     background-color: $color-blueberry;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+// }
+
+// &--danger {
+//   background-color: $color-error;
+//   border: none;
+
+//   &:not(:disabled):hover {
+//     background-color: $color-persian-red;
+//   }
+
+//   &:disabled {
+//     opacity: 0.6;
+//     cursor: not-allowed;
+//   }
+
+//   &:hover {
+//     box-shadow: 0px 0px 4px 4px $color-light-warn;
+//   }
+// }
+
+// &--bold {
+//   font-weight: $font-bold;
+// }
+
+// &--regular {
+//   font-weight: $font-regular;
+// }
+
+// Small
+//   &--primarySize {
+//     font-size: $font-14;
+//     line-height: 19.6px;
+//     height: 40px;
+//     @include displayFlex(row, center, center);
+//     column-gap: 6px;
+//     min-width: 100px;
+//     border-radius: 8px;
+//   }
+
+//   // Add Remove add filter
+//   &--secondarySize {
+//     font-size: $font-13;
+//     line-height: 18.2px;
+//     height: 34px;
+//     @include displayFlex(row, center, center);
+//     min-width: 78px;
+//     border-radius: 6px;
+//   }
+
+//   // BIG
+//   &--tertiarySize {
+//     font-size: $font-14;
+//     line-height: 19.6px;
+//     height: 40px;
+//     @include displayFlex(row, center, center);
+//     min-width: 185px;
+//     border-radius: 8px;
+//     column-gap: 6px;
+//   }
+
+//   // Filter
+//   &--fullWidth {
+//     font-size: $font-13;
+//     width: 100%;
+//     height: 40px;
+//     @include displayFlex(row, center, center);
+//     line-height: 19.5px;
+//     padding-top: 7px;
+//     padding-bottom: 7px;
+//     border-radius: 6px;
+//   }
+//   // no border radius
+//   &--isNotBorderRadius {
+//     border: none;
+//     border-radius: 0px;
+//   }
+//   &--isLargeWidth {
+//     width: 215px;
+//   }
+//   &--noBorder {
+//     border: 1px solid transparent;
+//   }
+// }
+
+// .bold {
+//   font-weight: $font-bold;
+// }

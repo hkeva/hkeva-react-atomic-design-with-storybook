@@ -1,0 +1,46 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.a-input {
+  $root: &;
+  flex-grow: 1;
+  @include displayFlex(row, flex-start, center);
+  border: 1px solid $color-gray-light-two;
+  background-color: $color-white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px 12px;
+  column-gap: 8px;
+  font-size: $font-14;
+  transform-origin: center;
+  transition: 0.1s all linear;
+
+  &--disabled {
+    background-color: $color-white-two;
+    #{$root}__input {
+      background-color: $color-white-two;
+      color: $color-secondary-two;
+      pointer-events: none;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    background: $color-white;
+    border: none;
+    outline: none;
+    height: 22px;
+    color: $color-secondary-one;
+
+    &::placeholder {
+      color: $color-secondary-two;
+    }
+  }
+
+  &__errorMsg {
+    @include displayFlex(row, unset, center);
+    column-gap: 6px;
+    margin-top: 6px;
+  }
+}

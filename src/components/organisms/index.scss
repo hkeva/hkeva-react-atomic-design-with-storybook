@@ -1,0 +1,11 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.o-form {
+  &__inputsAndButton {
+    @include displayFlex(column, null, null);
+    gap: 25px;
+    margin-top: 25px;
+  }
+}

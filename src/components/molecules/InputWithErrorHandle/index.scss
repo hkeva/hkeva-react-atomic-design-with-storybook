@@ -1,0 +1,12 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.m-inputWithErrorHandle {
+  @include displayFlex(column, null, null);
+  gap: 5px;
+
+  & > * {
+    margin: 0 0 0 7px;
+  }
+}

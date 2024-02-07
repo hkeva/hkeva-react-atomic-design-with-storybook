@@ -1,0 +1,26 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.m-card {
+  min-height: 88px;
+  padding: 23px 30px;
+  background-color: $color-white;
+  border-radius: 5px;
+  @include displayFlex(row, space-between, center);
+  box-shadow: 0px 0px 3px 3px $color-shadow-button;
+
+  &__title {
+    @include displayFlex(row, start, center);
+    gap: 10px;
+  }
+
+  &__date {
+    @include displayFlex(column, null, null);
+    gap: 5px;
+
+    & > * {
+      margin: 0;
+    }
+  }
+}
