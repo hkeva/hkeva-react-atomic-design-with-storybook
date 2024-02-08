@@ -1,5 +1,4 @@
-//it will be converted to absolute path later
-import { Text } from "../../../components/atoms/text/index";
+import { Text } from "components/atoms/text/index";
 import "./index.scss";
 
 export interface CardProps {

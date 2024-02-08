@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-//it will be converted to absolute path later
-import { Button } from "../../../components/atoms/button";
+import { Button } from "components/atoms/button";
 import finalizeIcon from "assets/icons/finalize.svg";
 import { Card } from ".";
 

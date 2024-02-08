@@ -1,7 +1,6 @@
-//it will be converted to absolute path later
-import { Button } from "../../components/atoms/button";
-import { Input } from "../../components/atoms/input";
-import { Card } from "../../components/molecules/card";
+import { Button } from "components/atoms/button";
+import { Input } from "components/atoms/input";
+import { Card } from "components/molecules/card";
 import "./index.scss";
 
 export interface FormProps {}
